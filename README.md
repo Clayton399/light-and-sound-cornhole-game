@@ -1,8 +1,12 @@
 # light-and-sound-cornhole-game
 When a bag goes into the cornhole LED's and Sounds are activated.
+
 Tuesday Sept 8th 2020 added Adafruit Circuit Playground Code to Repository.  Victory!  Brand new to Github.
+
 CircuitPython Audio Out
+
 lady ada
+
 Though the following example uses the Circuit Playground Express to demonstrate, the code works exactly the same way with the Circuit Playground Bluefruit. Simply copy the code and follow along with your Circuit Playground Bluefruit!
 The Circuit Playground Express has some nice built in audio output capabilities.
 
