@@ -3,7 +3,7 @@ import time
 import board
 import neopixel
 
-pixels = neopixel.NeoPixel(A3, 13, brightness=0.2, auto_write=False)
+pixels = neopixel.NeoPixel(Board.A3, 13, brightness=0.2, auto_write=False)
 
 # choose which demos to play
 # 1 means play, 0 means don't!
