@@ -7,10 +7,10 @@ pixels = neopixel.NeoPixel(Board.A3, 13, brightness=0.2, auto_write=False)
 
 # choose which demos to play
 # 1 means play, 0 means don't!
-color_chase_demo = 1
+color_chase_demo = 0
 flash_demo = 1
-rainbow_demo = 1
-rainbow_cycle_demo = 1
+rainbow_demo = 0
+rainbow_cycle_demo = 0
 
 
 def wheel(pos):
