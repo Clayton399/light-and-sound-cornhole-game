@@ -41,15 +41,4 @@ sine_wave_sample = RawSample(sine_wave)
 audio.play(sine_wave_sample, loop=True)  # Play the single sine_wave sample continuously...
 time.sleep(1)  # for the duration of the sleep (in seconds)
 audio.stop()  # and then stop.
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
