@@ -3,19 +3,19 @@ import time
 import board
 import neopixel
 
-pixels = neopixel.NeoPixel(Board.A3, 13, brightness=0.2, auto_write=False)
+pixels = neopixel.NeoPixel(board.A3, 13, brightness=0.9, auto_write=False)
 
 # choose which demos to play
 # 1 means play, 0 means don't!
-color_chase_demo = 1
+color_chase_demo = 0
 flash_demo = 1
-rainbow_demo = 1
-rainbow_cycle_demo = 1
+rainbow_demo = 0
+rainbow_cycle_demo = 0
 
 
 def wheel(pos):
     # Input a value 0 to 255 to get a color value.
-    # The colors are a transition r - g - b - back to r.
+    # The colours are a transition r - g - b - back to r.
     if pos < 0 or pos > 255:
         return (0, 0, 0)
     if pos < 85:
@@ -76,20 +76,13 @@ while True:
         pixels.fill(RED)
         pixels.show()
         # Increase or decrease to change the speed of the solid color change.
-        time.sleep(1)
+        time.sleep(0.1)
         pixels.fill(GREEN)
         pixels.show()
-        time.sleep(1)
+        time.sleep(0.1)
         pixels.fill(BLUE)
         pixels.show()
-        time.sleep(1)
+        time.sleep(0.1)
         pixels.fill(WHITE)
         pixels.show()
-        time.sleep(1)
-
-    if rainbow_cycle_demo:
-        rainbow_cycle(0.05)  # Increase the number to slow down the rainbow.
-
-    if rainbow_demo:
-        rainbow(0.05)  # Increase the number to slow down the rainbow.
-
+        time.sleep(0.1)
