@@ -1,0 +1,87 @@
+from adafruit_circuitplayground.express import cpx
+
+#  Drive NeoPixels on the NeoPixels Block on Crickit for
+#  Circuit Playground Express
+import time
+import neopixel
+import board
+
+num_pixels = 13  # Number of pixels driven from Crickit NeoPixel terminal
+
+# The following line sets up a NeoPixel strip on Crickit CPX pin A1
+pixels = neopixel.NeoPixel(board.A1, num_pixels, brightness=0.8,
+                           auto_write=False)
+
+def wheel(pos):
+    # Input a value 0 to 255 to get a color value.
+    # The colours are a transition r - g - b - back to r.
+    if pos < 0 or pos > 255:
+        return (0, 0, 0)
+    if pos < 85:
+        return (255 - pos * 3, pos * 3, 0)
+    if pos < 170:
+        pos -= 85
+        return (0, 255 - pos * 3, pos * 3)
+    pos -= 170
+    return (pos * 3, 0, 255 - pos * 3)
+
+RED = (255, 0, 0)
+YELLOW = (255, 150, 0)
+GREEN = (0, 255, 0)
+CYAN = (0, 255, 255)
+BLUE = (0, 0, 255)
+PURPLE = (180, 0, 255)
+WHITE = (255, 255, 255)
+OFF = (0, 0, 0) 
+
+while True:
+    if cpx.button_a:
+        cpx.play_file("rimshot.wav")
+
+        pass
+        
+        print("fill")
+    
+        pixels.fill(RED)
+        pixels.show()
+    # Increase or decrease to change the speed of the solid color change.
+        time.sleep(0.5)
+        pixels.fill(GREEN)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(GREEN)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(RED)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(WHITE)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(GREEN)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(RED)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(GREEN)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(RED)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(OFF)
+        pixels.show()
+        
+    
+    
+    if cpx.button_b:
+        cpx.play_file("laugh.wav")
+        print("fill")
+        pixels.fill(GREEN)
+        pixels.show()
+        time.sleep(0.5)
+        pixels.fill(OFF)
+        pixels.show()
+    
+        time.sleep(1.5)
